@@ -11,14 +11,11 @@ namespace Lesson_2___Scaling_Using_Rectangles
         Texture2D circleTexture;
         Texture2D starTexture;
 
-        Rectangle circleWhiteRect;
-        Rectangle circleRedRect;
-        Rectangle rectangleFlagRect;
-        Rectangle rectanglePoleRect;
+        Rectangle circleWhiteRect, circleRedRect, circlePoleRect;
+        Rectangle rectangleFlagRect, rectanglePoleRect, rectangleStringRect, rectangleString2Rect;
         Rectangle starRect;
-        Rectangle rectangleStringRect;
-        Rectangle rectangleString2Rect;
-        Rectangle circlePoleRect;
+
+        SpriteFont titleFont;
 
 
         private GraphicsDeviceManager _graphics;
@@ -43,7 +40,7 @@ namespace Lesson_2___Scaling_Using_Rectangles
             circleRedRect = new Rectangle(312, 167, 115, 115);
             rectangleFlagRect = new Rectangle(200, 100, 400, 250);
             rectanglePoleRect = new Rectangle(170, 90, 20, 1000);
-            starRect = new Rectangle(400, 185, 70, 70);
+            starRect = new Rectangle(400, 200, 50, 50);
             rectangleStringRect = new Rectangle(169, 120, 40, 5);
             rectangleString2Rect = new Rectangle(169, 320, 40, 5);
             circlePoleRect = new Rectangle(170, 80, 20, 30);
@@ -58,6 +55,7 @@ namespace Lesson_2___Scaling_Using_Rectangles
             circleTexture = Content.Load<Texture2D>("circle");
             rectangleTexture = Content.Load<Texture2D>("rectangle");
             starTexture = Content.Load<Texture2D>("star");
+            titleFont = Content.Load<SpriteFont>("Turkey");
         }
 
         protected override void Update(GameTime gameTime)
@@ -83,6 +81,7 @@ namespace Lesson_2___Scaling_Using_Rectangles
             _spriteBatch.Draw(starTexture, starRect, Color.White);
             _spriteBatch.Draw(rectangleTexture, rectangleStringRect, Color.Black);
             _spriteBatch.Draw(rectangleTexture, rectangleString2Rect, Color.Black);
+            _spriteBatch.DrawString(titleFont, "Turkey", new Vector2(330, 20), Color.Black);
             _spriteBatch.End();
             base.Draw(gameTime);
         }

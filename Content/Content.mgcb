@@ -49,3 +49,10 @@
 /processorParam:TextureFormat=Color
 /build:star.png
 
+#begin Turkey.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Turkey.spritefont
+
